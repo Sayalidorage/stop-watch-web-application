@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./image1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Heading */
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+}
+
+nav .navbar-brand {
+    font-size: 55px;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(228, 218, 218);
+    text-shadow: 2px 2px #ef7110;
+}
+
+nav .navbar-brand:hover {
+    margin: 0 auto;
+    color: rgb(133, 161, 255);
+}
+
+/* Main */
+
+.watch-container {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.watch-container .watch {
+    margin-top: 50px;
+    width: 50%;
+    height: 80%;
+    box-shadow: 1px 10px 10px 10px rgb(178, 99, 247);
+    background-color: transparent;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    width: 100%;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minute {
+    font-size: 65px;
+    font-weight: 700;
+    color: rgb(106, 236, 236);
+    text-shadow: 2px 2px 5px red;
+}
+
+.sec {
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 50px;
+    color: rgb(30, 112, 225);
+    text-shadow: 2px 2px 5px red;
+}
+
+.milli-sec {
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 35px;
+    color: rgb(208, 30, 227);
+    text-shadow: 2px 2px 5px red;
+}
+
+/* Buttons */
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.mybtn {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 20px;
+    padding: 10px 30px;
+    border: 1px solid rgb(188, 182, 182);
+    background-color: transparent;
+    color: rgb(253, 253, 253);
+    border-radius: 50px;
+}
+
+.mybtn:hover {
+    border: 1px solid white;
+    background-color: rgb(222, 217, 217);
+    color: rgb(79, 4, 86);
+}
+
+/* Laps */
+
+.laps {
+    margin: 20px 0;
+    list-style: none;
+    padding: 1px 0;
+    overflow-x: auto;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.laps::-webkit-scrollbar {
+    display: none;
+}
+
+.lap-item {
+    min-width: 350px;
+    padding: 10px;
+    border: 1px solid rgb(221, 173, 249);
+    text-align: center;
+    border-radius: 50px;
+    margin: 5px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.number {
+    color: rgb(251, 251, 251);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.timestamp {
+    text-align: center;
+    margin-left: 25px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.lap-item:hover {
+    border: purple;
+}
+
+.number .timestamp:hover {
+    color: rgb(67, 4, 67);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Responsive */
+
+@media (min-width: 435px) and (max-width: 770px) {
+
+    .watch-container .watch {
+        margin-top: 30%;
+        width: 80%;
+        height: 40%;
+    }
+
+    .button-wrapper {
+        margin-top: 20%;
+    }
+
+    .minute {
+        font-size: 50px;
+        /* color: rgb(8, 67, 24); */
+    }
+
+    .sec {
+        font-size: 32px;
+    }
+
+    .milli-sec {
+        font-size: 20px;
+    }
+
+    .mybtn {
+        font-size: 15px;
+    }
+
+    .laps {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .lap-item {
+        display: inline-block;
+        min-width: 250px;
+        padding: 5px 20px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+
+    .watch-container .watch {
+        margin-top: 30%;
+        width: 70%;
+        height: 40%;
+    }
+
+    .button-wrapper {
+        margin-top: 20%;
+    }
+
+    .button-wrapper .mybtn {
+        padding: 5px 15px;
+    }
+
+    .minute {
+        font-size: 38px;
+    }
+
+    .sec {
+        font-size: 32px;
+    }
+
+    .milli-sec {
+        font-size: 25px;
+    }
+
+    .mybtn {
+        font-size: 15px;
+    }
+
+    .laps {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .lap-item {
+        display: inline-block;
+        min-width: 200px;
+        padding: 2px 20px;
+    }
+}
